@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Gallery from "@/components/Gallery";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-warm-ivory text-deep-walnut">
@@ -127,14 +129,14 @@ export default function Home() {
             <picture>
               <source
                 media="(max-width: 767px)"
-                srcSet="/images/ongyeol/hero-ongyeol-mobile.webp"
+                srcSet={`${basePath}/images/ongyeol/hero-ongyeol-mobile.webp`}
               />
               <source
                 media="(min-width: 768px)"
-                srcSet="/images/ongyeol/hero-ongyeol.webp"
+                srcSet={`${basePath}/images/ongyeol/hero-ongyeol.webp`}
               />
               <img
-                src="/images/ongyeol/hero-ongyeol.webp"
+                src={`${basePath}/images/ongyeol/hero-ongyeol.webp`}
                 alt="혼자 먹는 따뜻한 저녁 한 끼를 표현한 콘셉트 이미지"
                 className="w-full h-full object-cover object-center"
                 fetchPriority="high"
@@ -307,7 +309,7 @@ export default function Home() {
               <article className="pt-6 first:pt-0 flex flex-row items-start sm:items-center gap-3.5 sm:gap-6 md:grid md:grid-cols-12">
                 <figure className="relative w-[110px] sm:w-[200px] md:w-auto md:col-span-4 aspect-[4/3] shrink-0 overflow-hidden rounded bg-deep-walnut/5 border border-deep-walnut/10">
                   <Image
-                    src="/images/ongyeol/menu-mushroom-rice.webp"
+                    src={`${basePath}/images/ongyeol/menu-mushroom-rice.webp`}
                     alt="구운 버섯 들깨밥 구상을 표현한 콘셉트 이미지"
                     fill
                     sizes="(max-width: 640px) 110px, (max-width: 768px) 200px, 360px"
@@ -354,7 +356,7 @@ export default function Home() {
               <article className="pt-6 flex flex-row items-start sm:items-center gap-3.5 sm:gap-6 md:grid md:grid-cols-12">
                 <figure className="relative w-[110px] sm:w-[200px] md:w-auto md:col-span-4 aspect-[4/3] shrink-0 overflow-hidden rounded bg-deep-walnut/5 border border-deep-walnut/10">
                   <Image
-                    src="/images/ongyeol/menu-chicken-set.webp"
+                    src={`${basePath}/images/ongyeol/menu-chicken-set.webp`}
                     alt="닭다리살 된장구이 정식 구상을 표현한 콘셉트 이미지"
                     fill
                     sizes="(max-width: 640px) 110px, (max-width: 768px) 200px, 360px"
@@ -401,7 +403,7 @@ export default function Home() {
               <article className="pt-6 flex flex-row items-start sm:items-center gap-3.5 sm:gap-6 md:grid md:grid-cols-12">
                 <figure className="relative w-[110px] sm:w-[200px] md:w-auto md:col-span-4 aspect-[4/3] shrink-0 overflow-hidden rounded bg-deep-walnut/5 border border-deep-walnut/10">
                   <Image
-                    src="/images/ongyeol/menu-warm-noodles.webp"
+                    src={`${basePath}/images/ongyeol/menu-warm-noodles.webp`}
                     alt="제철 채소 온국수 구상을 표현한 콘셉트 이미지"
                     fill
                     sizes="(max-width: 640px) 110px, (max-width: 768px) 200px, 360px"

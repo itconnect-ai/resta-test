@@ -12,10 +12,12 @@ interface GalleryItem {
   note: string;
 }
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
 const galleryItems: GalleryItem[] = [
   {
     id: "IMG-05",
-    src: "/images/ongyeol/gallery-preparation.webp",
+    src: `${basePath}/images/ongyeol/gallery-preparation.webp`,
     alt: "제철 채소를 준비하는 손을 담은 콘셉트 이미지",
     title: "제철 채소 준비 과정",
     caption: "제철 채소를 준비하는 손을 담은 콘셉트 이미지",
@@ -23,7 +25,7 @@ const galleryItems: GalleryItem[] = [
   },
   {
     id: "IMG-06",
-    src: "/images/ongyeol/gallery-solo-seat.webp",
+    src: `${basePath}/images/ongyeol/gallery-solo-seat.webp`,
     alt: "혼자 편안하게 식사하는 좌석을 표현한 콘셉트 이미지",
     title: "1인 식사 공간 분위기",
     caption: "혼자 편안하게 식사하는 좌석을 표현한 콘셉트 이미지",
